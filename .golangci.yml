@@ -1,0 +1,70 @@
+version: "2"
+linters:
+  default: all
+  disable:
+    - bodyclose
+    - cyclop
+    - dupl
+    - err113
+    - exhaustive
+    - exhaustruct
+    - forbidigo
+    - lll
+    - mnd
+    - nlreturn
+    - noctx
+    - paralleltest
+    - rowserrcheck
+    - sqlclosecheck
+    - testpackage
+    - tparallel
+    - varnamelen
+    - wrapcheck
+    - wsl
+  settings:
+    funlen:
+      lines: -1
+      statements: 50
+    goconst:
+      min-len: 5
+      min-occurrences: 4
+    gocyclo:
+      min-complexity: 12
+    godox:
+      keywords:
+        - FIXME
+    govet:
+      disable:
+        - fieldalignment
+      enable-all: true
+    misspell:
+      locale: US
+  exclusions:
+    generated: lax
+    rules:
+      - linters:
+          - funlen
+          - goconst
+          - godot
+        path: (.+)_test.go
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+issues:
+  max-same-issues: 0
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+  settings:
+    gofumpt:
+      extra-rules: true
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

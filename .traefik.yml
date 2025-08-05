@@ -1,0 +1,13 @@
+displayName: JWT Fields Header
+type: middleware
+iconPath: .assets/icon.png
+
+import: github.com/hiasr/jwt-fields-header
+
+summary: 'Extract JWT claims and create headers'
+
+testData:
+  HeaderName: X-JWT-Claims
+  JwtClaims:
+    - sub
+    - role
