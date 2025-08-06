@@ -1,4 +1,4 @@
-module github.com/hiasr/jwt-fields-header
+module github.com/hiasr/jwtfieldsheader
 
 go 1.19
 

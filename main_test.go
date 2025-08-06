@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/hiasr/jwt-fields-header" //nolint:depguard
+	"github.com/hiasr/jwtfieldsheader" //nolint:depguard
 )
 
 func TestJwtFieldsHeader(t *testing.T) {
@@ -17,7 +17,7 @@ func TestJwtFieldsHeader(t *testing.T) {
 	ctx := context.Background()
 	next := http.HandlerFunc(func(_ http.ResponseWriter, _ *http.Request) {})
 
-	handler, err := jwtfieldsheader.New(ctx, next, cfg, "jwt-fields-header-plugin")
+	handler, err := jwtfieldsheader.New(ctx, next, cfg, "jwtfieldsheader-plugin")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -47,7 +47,7 @@ func TestJwtFieldsHeaderNoToken(t *testing.T) {
 	ctx := context.Background()
 	next := http.HandlerFunc(func(_ http.ResponseWriter, _ *http.Request) {})
 
-	handler, err := jwtfieldsheader.New(ctx, next, cfg, "jwt-fields-header-plugin")
+	handler, err := jwtfieldsheader.New(ctx, next, cfg, "jwtfieldsheader-plugin")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -77,7 +77,7 @@ func TestJwtFieldsHeaderNoClaims(t *testing.T) {
 	ctx := context.Background()
 	next := http.HandlerFunc(func(_ http.ResponseWriter, _ *http.Request) {})
 
-	handler, err := jwtfieldsheader.New(ctx, next, cfg, "jwt-fields-header-plugin")
+	handler, err := jwtfieldsheader.New(ctx, next, cfg, "jwtfieldsheader-plugin")
 	if err != nil {
 		t.Fatal(err)
 	}

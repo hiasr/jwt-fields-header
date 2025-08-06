@@ -35,8 +35,8 @@ The plugin requires two configuration parameters:
 ```yaml
 experimental:
   plugins:
-    jwt-fields-header:
-      moduleName: github.com/hiasr/jwt-fields-header
+    jwtFieldsHeader:
+      moduleName: github.com/hiasr/jwtfieldsheader
       version: v0.1.0
 ```
 
@@ -64,7 +64,7 @@ http:
   middlewares:
     jwt-headers:
       plugin:
-        jwt-fields-header:
+        jwtFieldsHeader:
           HeaderName: X-User-Info
           JwtClaims:
             - sub

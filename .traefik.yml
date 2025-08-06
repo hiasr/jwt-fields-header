@@ -2,7 +2,7 @@ displayName: JWT Fields Header
 type: middleware
 iconPath: .assets/icon.png
 
-import: github.com/hiasr/jwt-fields-header
+import: github.com/hiasr/jwtfieldsheader
 
 summary: 'Extract JWT claims and create headers'
 
